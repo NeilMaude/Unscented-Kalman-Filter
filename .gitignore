@@ -45,3 +45,35 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.vs/config/applicationhost.config
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+*.suo
+.vs/Unscented-Kalman-Filter/v15/Browse.VC.db
+*.opendb
+.vs/Unscented-Kalman-Filter/v15/ipch/AutoPCH/cfe4772d/MAIN-795cb622/MAIN.ipch
+*.ipch
+.vs/Unscented-Kalman-Filter/v15/ipch/AutoPCH/cfe4772d/TOOLS-8bb920ae/TOOLS.ipch
+build/x86-Debug/ALL_BUILD.vcxproj
+*.filters
+build/x86-Debug/CMakeCache.txt
+*.cmake
+build/x86-Debug/CMakeFiles/3.6.20160606-g0391f-MSVC/CompilerIdC/CMakeCCompilerId.c
+*.exe
+*.vcxproj
+build/x86-Debug/CMakeFiles/3.6.20160606-g0391f-MSVC/CompilerIdC/Debug/CMakeCCompilerId.obj
+*.tlog
+build/x86-Debug/CMakeFiles/3.6.20160606-g0391f-MSVC/CompilerIdCXX/CMakeCXXCompilerId.cpp
+*.obj
+build/x86-Debug/CMakeFiles/820cdb8fae327d1d295b75a7bf10e71a/generate.stamp.rule
+*.check_cache
+build/x86-Debug/CMakeFiles/CMakeOutput.log
+*.stamp
+build/x86-Debug/CMakeFiles/generate.stamp.depend
+*.list
+build/x86-Debug/CMakeFiles/TargetDirectories.txt
+*.ilk
+build/x86-Debug/Debug/UnscentedKF.pdb
+*.pdb
+build/x86-Debug/UnscentedKF.sln
+data/output.txt

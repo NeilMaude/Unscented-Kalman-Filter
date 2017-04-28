@@ -11,6 +11,10 @@
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
 
+// constants
+static const double dblZeroThreshold = 1.0E-6;      // value below which a double is considered to be zero
+static const double dblMicroSectoSec = 1.0E-6;      // multiply by this to convert from timestamp to seconds
+
 class UKF {
 public:
 
@@ -74,6 +78,9 @@ public:
   ///* the current NIS for laser
   double NIS_laser_;
 
+  // retain previous timestamp for on-going calcs
+  long long previous_timestamp_;
+
   /**
    * Constructor
    */
@@ -108,6 +115,12 @@ public:
    * @param meas_package The measurement at k+1
    */
   void UpdateRadar(MeasurementPackage meas_package);
+
+  /*
+  Sigma point generation function
+  */
+  void UKF::GenerateSigmaPoints(MatrixXd* Xsig_out);
+
 };
 
 #endif /* UKF_H */

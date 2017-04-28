@@ -28,6 +28,7 @@ void check_arguments(int argc, char* argv[]) {
     cerr << "Please include an output file.\n" << usage_instructions << endl;
   } else if (argc == 3) {
     has_valid_args = true;
+    std::cout << "Arguments: " << std::endl << argv[1] << std::endl << argv[2] << std::endl;
   } else if (argc > 3) {
     cerr << "Too many arguments.\n" << usage_instructions << endl;
   }
@@ -171,6 +172,8 @@ int main(int argc, char* argv[]) {
     out_file_ << ukf.x_(2) << "\t"; // vel_abs -est
     out_file_ << ukf.x_(3) << "\t"; // yaw_angle -est
     out_file_ << ukf.x_(4) << "\t"; // yaw_rate -est
+
+    std::cout << "x: " << std::endl << ukf.x_ << std::endl;
 
     // output lidar and radar specific data
     if (measurement_pack_list[k].sensor_type_ == MeasurementPackage::LASER) {
