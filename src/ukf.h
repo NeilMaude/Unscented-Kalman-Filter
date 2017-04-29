@@ -121,6 +121,21 @@ public:
   */
   void UKF::GenerateSigmaPoints(MatrixXd* Xsig_out);
 
+  /*
+  Augmented Sigma point generation function
+  */
+  void UKF::GenerateAugmentedSigmaPoints(MatrixXd* Xsig_out);
+
+  /*
+  Sigma point prediction function
+  */
+  void UKF::SigmaPointPrediction(MatrixXd Xsig_aug, double delta_t, MatrixXd* Xsig_out);
+
+  /*
+  Predict mean and covariance from a set of predicted Sigma points
+  */
+  void UKF::PredictMeanAndCovariance(MatrixXd Xsig_pred);
+
 };
 
 #endif /* UKF_H */
