@@ -1,46 +1,45 @@
 # Unscented Kalman Filter Project Starter Code
 Self-Driving Car Engineer Nanodegree Program
 
+Neil Maude, April 2017
+
 ---
 
 ## Dependencies
-
-* cmake >= v3.5
-* make >= v4.1
-* gcc/g++ >= v5.4
+Originally provided as SDCND starter code to build under CMake.
+Project further developed using Visual Studio 2017 (as a CMake project).
+* cmake >= 3.5
 
 ## Basic Build Instructions
 
 1. Clone this repo.
-2. Make a build directory: `mkdir build && cd build`
-3. Compile: `cmake .. && make`
-4. Run it: `./UnscentedKF path/to/input.txt path/to/output.txt`. You can find
+2. Compile using your preferred build system 
+3. Run executable: `./UnscentedKF path/to/input.txt path/to/output.txt`. You can find
    some sample inputs in 'data/'.
-    - eg. `./UnscentedKF ../data/obj_pose-laser-radar-synthetic-input.txt`
+    - eg. `./UnscentedKF ../data/obj_pose-laser-radar-synthetic-input.txt output.txt`
 
-## Editor Settings
+## Development Notes
+Kept the UpdateLidar() and UpdateRadar() functions separate to make the code more 
+understandable when referenced in the future (there is scope to consolidate much of the
+code within these functions, as the only key difference is the measurement space 
+dimension - 2 for lidar, 3 for radar).
 
-We've purposefully kept editor configuration files out of this repo in order to
-keep it as simple and environment agnostic as possible. However, we recommend
-using the following settings:
+## Project Results
 
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
+### Data file RMSE results
+Results when using file `obj_pose-laser-radar-synthetic-input.txt`:
 
-## Code Style
+RMSE values (to 3 cecimals):
+Px: 0.068 (required < 0.09)
+Py: 0.083 (required < 0.10)
+Vx: 0.280 (required < 0.40)
+Vy: 0.216 (required < 0.30)
 
-Please stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as much as possible.
+Additional project analysis can be found in `Unscented Kalman Filter Notes.pdf`.  
+This PDF includes:
+1. Approximation of `std_a_` and `std_yawdd_` noise parameters.
+2. Filter consistency checks using Normalized Innovation Squared (NIS) statistics
+3. Performance comparisons between UKF and EKF projects
+4. Comparison of lidar-only, radar-only and lidar+radar fusion
 
-## Generating Additional Data
 
-This is optional!
-
-If you'd like to generate your own radar and lidar data, see the
-[utilities repo](https://github.com/udacity/CarND-Mercedes-SF-Utilities) for
-Matlab scripts that can generate additional data.
-
-## Project Instructions and Rubric
-
-This information is only accessible by people who are already enrolled in Term 2
-of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/c3eb3583-17b2-4d83-abf7-d852ae1b9fff/concepts/f437b8b0-f2d8-43b0-9662-72ac4e4029c1)
-for instructions and the project rubric.
