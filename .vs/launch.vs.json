@@ -9,7 +9,7 @@
       "name": "UnscentedKF",
       "args": [
         "D:\\Git\\C++\\Unscented-Kalman-Filter\\data\\obj_pose-laser-radar-synthetic-input.txt",
-        "D:\\Git\\C++\\Unscented-Kalman-Filter\\data\\output.txt"
+        "D:\\Git\\C++\\Unscented-Kalman-Filter\\data\\output-synthetic-radar-only.txt"
       ]
     }
   ]

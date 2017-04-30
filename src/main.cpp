@@ -173,6 +173,7 @@ int main(int argc, char* argv[]) {
     out_file_ << ukf.x_(3) << "\t"; // yaw_angle -est
     out_file_ << ukf.x_(4) << "\t"; // yaw_rate -est
 
+    //test code
     std::cout << "x: " << std::endl << ukf.x_ << std::endl;
 
     // output lidar and radar specific data

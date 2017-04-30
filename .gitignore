@@ -77,3 +77,11 @@ build/x86-Debug/Debug/UnscentedKF.pdb
 *.pdb
 build/x86-Debug/UnscentedKF.sln
 data/output.txt
+.vs/VSWorkspaceState.json
+data/output-data-1.txt
+data/output-data-2.txt
+data/output-synthetic-lidar-only.txt
+data/output-synthetic-radar-only.txt
+data/output-synthetic.txt
+data/~$scented Kalman Filter Notes.docx
+data/~WRL2252.tmp

@@ -81,6 +81,14 @@ public:
   // retain previous timestamp for on-going calcs
   long long previous_timestamp_;
 
+  // Measurement space dimensions
+  int n_z_laser_;
+  int n_z_radar_;
+
+  // Measurement noise covariance matrices, R
+  MatrixXd R_laser_;
+  MatrixXd R_radar_;
+
   /**
    * Constructor
    */
