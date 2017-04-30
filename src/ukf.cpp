@@ -124,7 +124,7 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
     // depending on whether the measurement is radar or lidar (radar needs polar co-ord transform)
 
     // test code
-    std::cout << "Initialising..." << std::endl;  
+    //std::cout << "Initialising..." << std::endl;  
     
     // Initialise initial state from the first measurement, depending on the sensor type
     if (meas_package.sensor_type_ == MeasurementPackage::LASER) {
