@@ -29,12 +29,13 @@ dimension - 2 for lidar, 3 for radar).
 ### Data file RMSE results
 Results when using file `obj_pose-laser-radar-synthetic-input.txt`:
 
-RMSE values (to 3 cecimals):
-Px: 0.068 (required < 0.09)
-Py: 0.083 (required < 0.10)
-Vx: 0.280 (required < 0.40)
-Vy: 0.216 (required < 0.30)
+RMSE values (to 3 decimals):
+- Px: 0.068 (required < 0.09)
+- Py: 0.083 (required < 0.10)
+- Vx: 0.280 (required < 0.40)
+- Vy: 0.216 (required < 0.30)
 
+### Additional analysis
 Additional project analysis can be found in `Unscented Kalman Filter Notes.pdf`.  
 This PDF includes:
 1. Approximation of `std_a_` and `std_yawdd_` noise parameters.
